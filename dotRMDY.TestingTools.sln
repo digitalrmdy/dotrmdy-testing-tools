@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotRMDY.TestingTools", "source\dotRMDY.TestingTools\dotRMDY.TestingTools.csproj", "{88C6905E-408A-43D0-A51D-4C09F2D7EF6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{C734D582-E4D9-40F3-B159-46BF2A4BA01A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C734D582-E4D9-40F3-B159-46BF2A4BA01A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C734D582-E4D9-40F3-B159-46BF2A4BA01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C6905E-408A-43D0-A51D-4C09F2D7EF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C6905E-408A-43D0-A51D-4C09F2D7EF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C6905E-408A-43D0-A51D-4C09F2D7EF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C6905E-408A-43D0-A51D-4C09F2D7EF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
