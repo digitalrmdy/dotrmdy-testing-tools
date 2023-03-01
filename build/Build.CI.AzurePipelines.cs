@@ -7,8 +7,7 @@ using Nuke.Common.CI.AzurePipelines;
     FetchDepth = 0,
     TriggerBatch = true,
     PullRequestsBranchesInclude = new[] { "main" },
-    InvokedTargets = new[] { nameof(Compile), nameof(Pack) },
-    NonEntryTargets = new[] { nameof(Clean), nameof(Restore) },
+    InvokedTargets = new[] { nameof(Pack) },
     CacheKeyFiles = new string[0],
     CachePaths = new string[0])]
 partial class Build
