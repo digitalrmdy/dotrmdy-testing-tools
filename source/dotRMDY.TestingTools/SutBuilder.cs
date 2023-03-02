@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using FakeItEasy;
 using FakeItEasy.Sdk;
 using JetBrains.Annotations;
 
@@ -46,6 +47,12 @@ namespace dotRMDY.TestingTools
 			}
 
 			return ConstructorInfo.Invoke(constructorParameters);
+		}
+
+		public TDep AddFakedDependency<TDep>() where TDep : class
+		{
+			var dependency = A.Fake<TDep>();
+			return AddDependency(dependency);
 		}
 
 		public TDep AddDependency<TDep>(TDep dependency) where TDep : notnull
