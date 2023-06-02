@@ -39,7 +39,6 @@ stages:
             inputs:
               script: './build.cmd Publish'
             env:
-              MyGetFeedUrl: $(MyGetFeedUrl)
               MyGetApiKey: $(MyGetApiKey)
           - task: PublishBuildArtifacts@1
             inputs:
