@@ -22,7 +22,6 @@
       <PackageReference Include="FakeItEasy" Version="7.3.1" />
       <PackageReference Include="FluentAssertions" Version="6.10.0" />
       <PackageReference Include="JetBrains.Annotations" Version="2022.3.1" PrivateAssets="All" />
-      <PackageReference Include="xunit" Version="2.4.2" />
     </ItemGroup>
 
 </Project>
