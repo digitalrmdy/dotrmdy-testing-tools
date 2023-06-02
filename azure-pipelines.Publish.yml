@@ -39,8 +39,5 @@ stages:
             inputs:
               script: './build.cmd Publish'
             env:
+              MyGetUsername: $(MyGetUsername)
               MyGetApiKey: $(MyGetApiKey)
-          - task: PublishBuildArtifacts@1
-            inputs:
-              artifactName: artifacts
-              pathToPublish: 'artifacts'

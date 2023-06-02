@@ -10,10 +10,21 @@ partial class Build
 	const string RMDYMyGetName = "RMDY-MyGet";
 
 	[Secret, Parameter]
+	readonly string MyGetUsername;
+
+	[Secret, Parameter]
 	readonly string MyGetApiKey;
 
+	Target UpdateMyGetFeedCredentials => _ => _
+		.OnlyWhenStatic(() => IsServerBuild)
+		.Requires(() => !string.IsNullOrEmpty(MyGetUsername) && !string.IsNullOrEmpty(MyGetApiKey))
+		.Executes(() =>
+		{
+			DotNet($"nuget update source {RMDYMyGetName} --username {MyGetUsername} --password {MyGetApiKey} --store-password-in-clear-text");
+		});
+
 	Target PublishToMyGet => _ => _
-		.DependsOn(Pack)
+		.DependsOn(Pack, UpdateMyGetFeedCredentials)
 		.Requires(() => !string.IsNullOrEmpty(MyGetApiKey))
 		.Executes(() =>
 		{
