@@ -13,8 +13,8 @@
         <PackageDescription>A package containing basic testing tools, as well as must-have references to other testing-related libraries.</PackageDescription>
         <Authors>dotRMDY</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://dev.azure.com/Growandglow/dotRmdy/_git/dotrmdy-testing-tools</PackageProjectUrl>
-        <RepositoryUrl>https://dev.azure.com/Growandglow/dotRmdy/_git/dotrmdy-testing-tools</RepositoryUrl>
+        <PackageProjectUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</PackageProjectUrl>
+        <RepositoryUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
