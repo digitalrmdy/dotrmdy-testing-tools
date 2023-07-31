@@ -6,7 +6,6 @@ using Nuke.Common.CI.AzurePipelines;
     AutoGenerate = false,
     FetchDepth = 0,
     TriggerBatch = true,
-    PullRequestsBranchesInclude = new[] { "main" },
     InvokedTargets = new[] { nameof(Pack) },
     CacheKeyFiles = new string[0],
     CachePaths = new string[0])]
@@ -18,8 +17,6 @@ using Nuke.Common.CI.AzurePipelines;
     FetchDepth = 0,
     TriggerBatch = true,
     TriggerTagsInclude = new[] { "'*.*.*'" },
-    ImportVariableGroups = new[] { "dotRMDY-MyGet" },
-    ImportSecrets = new[] { nameof(MyGetApiKey) },
     InvokedTargets = new[] { nameof(Publish) },
     CacheKeyFiles = new string[0],
     CachePaths = new string[0])]

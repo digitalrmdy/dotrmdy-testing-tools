@@ -1,27 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<IsPackable>true</IsPackable>
-    </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
 
-    <PropertyGroup>
-        <PackageId>dotRMDY.TestingTools</PackageId>
-        <PackageDescription>A package containing basic testing tools, as well as must-have references to other testing-related libraries.</PackageDescription>
-        <Authors>dotRMDY</Authors>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</PackageProjectUrl>
-        <RepositoryUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-    </PropertyGroup>
+	<PropertyGroup>
+		<PackageDescription>A package containing basic testing tools, as well as must-have references to other testing-related libraries.</PackageDescription>
+		<Authors>dotRMDY</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</PackageProjectUrl>
+		<RepositoryUrl>https://dev.azure.com/Growandglow/dotRMDY/_git/dotrmdy-testing-tools</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="FakeItEasy" Version="7.4.0" />
-      <PackageReference Include="FluentAssertions" Version="6.11.0" />
-      <PackageReference Include="JetBrains.Annotations" Version="2022.3.1" PrivateAssets="All" />
-    </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FakeItEasy" Version="7.4.0"/>
+		<PackageReference Include="FluentAssertions" Version="6.11.0"/>
+		<PackageReference Include="JetBrains.Annotations" Version="2023.2.0" PrivateAssets="All" />
+	</ItemGroup>
 
 </Project>

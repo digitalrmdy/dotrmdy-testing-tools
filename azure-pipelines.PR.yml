@@ -17,11 +17,6 @@
 trigger:
   batch: true
 
-pr:
-  branches:
-    include:
-      - main
-
 stages:
   - stage: ubuntu_latest
     displayName: 'ubuntu-latest'

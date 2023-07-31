@@ -6,6 +6,10 @@
     "build": {
       "type": "object",
       "properties": {
+        "AzureArtifactsPAT": {
+          "type": "string",
+          "default": "Secrets must be entered via 'nuke :secrets [profile]'"
+        },
         "Configuration": {
           "type": "string",
           "description": "Configuration to build - Default is 'Debug' (local) or 'Release' (server)",
@@ -43,10 +47,6 @@
             "VSCode"
           ]
         },
-        "MyGetApiKey": {
-          "type": "string",
-          "default": "Secrets must be entered via 'nuke :secrets [profile]'"
-        },
         "NoLogo": {
           "type": "boolean",
           "description": "Disables displaying the NUKE logo"
@@ -80,8 +80,9 @@
               "Compile",
               "Pack",
               "Publish",
-              "PublishToMyGet",
-              "Restore"
+              "PublishToAzureArtifacts",
+              "Restore",
+              "UpdateAzureArtifactsFeedCredentials"
             ]
           }
         },
@@ -99,8 +100,9 @@
               "Compile",
               "Pack",
               "Publish",
-              "PublishToMyGet",
-              "Restore"
+              "PublishToAzureArtifacts",
+              "Restore",
+              "UpdateAzureArtifactsFeedCredentials"
             ]
           }
         },
