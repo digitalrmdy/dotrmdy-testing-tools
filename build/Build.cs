@@ -83,5 +83,5 @@ partial class Build : NukeBuild
         });
 
     Target Publish => _ => _
-        .Triggers(PublishToAzureArtifacts);
+        .Triggers(PublishToDotRmdyAzureArtifacts);
 }
