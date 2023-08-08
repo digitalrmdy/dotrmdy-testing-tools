@@ -49,9 +49,11 @@ namespace dotRMDY.TestingTools
 			return ConstructorInfo.Invoke(constructorParameters);
 		}
 
-		public TDep AddFakedDependency<TDep>() where TDep : class
+		public TDep AddFakedDependency<TDep>(bool createStrictFake = false) where TDep : class
 		{
-			var dependency = A.Fake<TDep>();
+			var dependency = createStrictFake
+				? A.Fake<TDep>(x => x.Strict())
+				: A.Fake<TDep>();
 			return AddDependency(dependency);
 		}
 
