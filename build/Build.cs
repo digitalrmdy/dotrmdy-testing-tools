@@ -77,7 +77,6 @@ partial class Build : NukeBuild
                 .SetProject(Solution)
                 .SetConfiguration(Configuration)
                 .SetVersion(GitVersion.NuGetVersion)
-                .SetRepositoryUrl(GitRepository.HttpsUrl)
                 .SetProperty("RepositoryBranch", GitRepository.Branch)
                 .SetProperty("RepositoryCommit", GitRepository.Commit)
                 .SetOutputDirectory(ArtifactsDirectory));
