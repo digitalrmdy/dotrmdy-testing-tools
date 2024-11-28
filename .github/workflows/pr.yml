@@ -16,7 +16,7 @@
 
 name: pr
 
-on: [push]
+on: [pull_request]
 
 jobs:
   ubuntu-latest:
@@ -24,13 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: 'Cache: .nuke/temp, ~/.nuget/packages'
-        uses: actions/cache@v4
         with:
-          path: |
-            .nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
+          fetch-depth: 0
       - name: 'Run: Pack'
         run: ./build.cmd Pack
       - name: 'Publish: artifacts'
