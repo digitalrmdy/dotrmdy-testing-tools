@@ -30,6 +30,9 @@ jobs:
         with:
           fetch-depth: 0
       - name: 'Run: Publish'
+        env:
+          NUGETAPIKEY: ${{ secrets.NUGETAPIKEY }}
+          NUGETSOURCE: NUGETSOURCE
         run: ./build.cmd Publish
       - name: 'Publish: artifacts'
         uses: actions/upload-artifact@v4
