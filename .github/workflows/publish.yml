@@ -32,7 +32,7 @@ jobs:
       - name: 'Run: Publish'
         env:
           NUGETAPIKEY: ${{ secrets.NUGETAPIKEY }}
-          NUGETSOURCE: NUGETSOURCE
+          NUGET_SOURCE: ${{ secrets.NUGET_SOURCE }}
         run: ./build.cmd Publish
       - name: 'Publish: artifacts'
         uses: actions/upload-artifact@v4

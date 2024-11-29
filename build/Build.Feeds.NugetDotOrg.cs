@@ -9,7 +9,7 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 partial class Build
 {
 	[Secret, Parameter] string NUGETAPIKEY;
-	[Parameter] string NUGETSOURCE = "https://api.nuget.org/v3/index.json";
+	[Secret, Parameter] string NUGET_SOURCE = "https://api.nuget.org/v3/index.json";
 	
 	Target PublishToNugetOrg => _ => _
 		.DependsOn(Pack)
@@ -17,7 +17,7 @@ partial class Build
 		{
 			IEnumerable<AbsolutePath> artifactPackages = ArtifactsDirectory.GlobFiles("*.nupkg");
 			DotNetNuGetPush(s => s
-				.SetSource(NUGETSOURCE)
+				.SetSource(NUGET_SOURCE)
 				.SetApiKey(NUGETAPIKEY) 
 				.EnableSkipDuplicate()
 				.CombineWith(artifactPackages, (_, v) => _
