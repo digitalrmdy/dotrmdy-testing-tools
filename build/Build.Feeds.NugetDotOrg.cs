@@ -12,7 +12,7 @@ partial class Build
 {
 	[Secret, Parameter] string NUGETAPIKEY;
 	[Secret, Parameter] string NUGET_SOURCE = "https://api.nuget.org/v3/index.json";
-	
+
 	Target PublishToNugetOrg => _ => _
 		.DependsOn(Pack)
 		.Requires(() => NUGET_SOURCE)
@@ -25,12 +25,14 @@ partial class Build
 				Log.Warning("No packages found to push to NuGet.org");
 				return;
 			}
+
 			artifactPackages.ForEach(x =>
 			{
 				Log.Information("Pushing {Path} to NuGet.org", x);
-				DotNetNuGetPush(s=> s
+				DotNetNuGetPush(s => s
 					.SetSource(NUGET_SOURCE)
 					.SetApiKey(NUGETAPIKEY)
 					.SetTargetPath(x));
 			});
+		});
 }
