@@ -18,7 +18,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="FakeItEasy" Version="8.3.0" />
-		<PackageReference Include="FluentAssertions" Version="7.0.0" />
+		<PackageReference Include="FluentAssertions" Version="8.1.0" />
 		<PackageReference Include="JetBrains.Annotations" Version="2024.3.0" PrivateAssets="All" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0" />
 	</ItemGroup>
